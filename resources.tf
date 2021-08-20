@@ -15,7 +15,7 @@ resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
 resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   provider = netapp-cloudmanager
   volume_protocol = "nfs"
-  name = "volume_1"
+  name = var.source_volume
   size = 1
   unit = "GB"
   provider_volume_type = "gp2"
@@ -29,6 +29,7 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
 
 
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
+  depends_on = [netapp-cloudmanager_volume.cvo-volume-nfs]
   source_working_environment_id = var.source_working_environment_id
   destination_working_environment_id = var.destination_working_environment_id
   source_volume_name = var.source_volume

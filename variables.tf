@@ -55,8 +55,3 @@ variable "destination_volume" {
 variable "destination_svm" {
 }
 
-
-variable "destination_aggregate" {
-}
-
-
