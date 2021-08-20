@@ -38,7 +38,6 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   destination_svm_name = var.destination_svm
   policy = "MirrorAllSnapshots"
   schedule = "5min"
-  destination_aggregate_name = var.destination_aggregate
   max_transfer_rate = "102400"
   client_id = var.connector_id
 }
