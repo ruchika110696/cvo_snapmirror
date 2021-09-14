@@ -29,7 +29,7 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
 
 #Resource to configure SnapMirror between two Cloud Volumes
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
-  depends_on                          = [netapp-cloudmanager_volume.cvo-volume-nfs]
+  #depends_on                          = [netapp-cloudmanager_volume.cvo-volume-nfs]
   source_working_environment_id       = var.source_working_environment_id
   destination_working_environment_id  = var.destination_working_environment_id
   source_volume_name                  = var.source_volume
