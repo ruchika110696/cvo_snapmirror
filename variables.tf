@@ -23,9 +23,6 @@ variable "working_environment_id" {
 
 */
 
-variable "working_environment_id" {
-}
-
 
 
 variable "connector_id" {
