@@ -1,4 +1,4 @@
-/*
+
 # Resource to create CVO Cluster on AWS
 resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   #provider = netapp-cloudmanager
@@ -10,7 +10,7 @@ resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   writing_speed_state   = "NORMAL"
 }
 
-
+/*
 #Resource to create a NFS Volume
 resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   provider                    = netapp-cloudmanager
@@ -25,7 +25,7 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   working_environment_id      = var.source_working_environment_id
   client_id                   = var.connector_id
 }
-*/
+
 
 #Resource to configure SnapMirror between two Cloud Volumes
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
@@ -41,3 +41,4 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   max_transfer_rate                   = "102400"
   client_id                           = var.connector_id
 }
+*/
