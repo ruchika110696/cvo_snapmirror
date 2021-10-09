@@ -1,7 +1,7 @@
 
 # Resource to create CVO Cluster on AWS
 resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
-  #provider = netapp-cloudmanager
+  provider = netapp-cloudmanager
   name                  = var.name_of_cvo_working_environment
   region                = var.region
   subnet_id             = var.subnet
