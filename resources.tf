@@ -18,7 +18,7 @@ variable "var1" {
 
 output "o1" {
   value=var.var1
-  
+}
 /*
 #Resource to create a NFS Volume
 resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
