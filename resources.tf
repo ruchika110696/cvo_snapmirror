@@ -1,4 +1,4 @@
-/*
+
 # Resource to create CVO Cluster on AWS
 resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   provider = netapp-cloudmanager
@@ -9,7 +9,7 @@ resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   client_id             = var.connector_id
   writing_speed_state   = "NORMAL"
 }
-*/
+
   
 
 variable "var1" {
@@ -19,6 +19,8 @@ variable "var1" {
 output "o1" {
   value=var.var1
 }
+
+
 /*
 #Resource to create a NFS Volume
 resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
