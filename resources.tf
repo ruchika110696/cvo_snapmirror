@@ -2,23 +2,15 @@
 # Resource to create CVO Cluster on AWS
 resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   provider = netapp-cloudmanager
-  name                  = "test22"
-  region                = "us-west-1"
-  subnet_id             = "subnet-0ce7889cf1848fa75"
-  svm_password          = "Nbv12345!"
-  client_id             = "7jHeRHF4vgPD7Uznl7LUHWbUGiJyYAaIclients"
+  name                  = var.name_of_cvo_working_environment
+  region                = var.region
+  subnet_id             = var.subnet
+  svm_password          = var.cvo_admin_password
+  client_id             = var.connector_id
   writing_speed_state   = "NORMAL"
 }
 
   
-
-variable "var1" {
-  default="pani"
-}
-
-output "o1" {
-  value=var.var1
-}
 
 
 /*
