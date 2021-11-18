@@ -10,7 +10,7 @@ variable "connector_id" {
 
 #Variables to get details of FlexPod environment
 variable "name_of_on-prem-ontap" {
-  description = ""
+  description = "Name of the On-premise ONTAP"
 }
 
 
