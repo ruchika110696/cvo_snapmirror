@@ -53,7 +53,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   source_volume_name                 = var.source_volume
   source_svm_name                    = var.source_storage_vm_name
   destination_volume_name            = var.destination_volume
-  destination_svm_name               = netapp-cloudmanager_cvo_aws.cvo-aws.svm_name
+  destination_svm_name               = "svm_FlexpodCVOHA"
   policy                             = "MirrorAllSnapshots"
   schedule                           = var.schedule_of_replication
   max_transfer_rate                  = "102400"
