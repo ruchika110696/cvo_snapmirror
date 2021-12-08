@@ -62,6 +62,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
 
 
 
+/*
 #Resource to create a cloud volume on CVO
 resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   client_id                 = var.connector_id
@@ -75,7 +76,7 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   export_policy_nfs_version = ["nfs4"]
   working_environment_id    = netapp-cloudmanager_cvo_aws.cvo-aws.id
 }
-
+*/
 
 
 
