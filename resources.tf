@@ -5,7 +5,7 @@ data "netapp-cloudmanager_cvo_aws" "on-prem-ontap" {
   client_id = var.connector_id
 }
 
-
+/*
 #Resource to create a SINGLE NODE CVO Cluster on AWS
 resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   client_id           = var.connector_id
@@ -17,7 +17,8 @@ resource "netapp-cloudmanager_cvo_aws" "cvo-aws" {
   writing_speed_state = "NORMAL"
   license_type        = var.license_type
 }
-
+*/
+  
 
 
 /*
@@ -48,7 +49,7 @@ resource "netapp-cloudmanager_cvo_aws" "cvo-aws-ha" {
 #Resource to establish snapmirror relationship between on-prem and CVO
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   source_working_environment_id      = data.netapp-cloudmanager_cvo_aws.on-prem-ontap.id
-  destination_working_environment_id = netapp-cloudmanager_cvo_aws.cvo-aws.id
+  destination_working_environment_id = "VsaWorkingEnvironment-K0c3W4ms"
   source_volume_name                 = var.source_volume
   source_svm_name                    = var.source_storage_vm_name
   destination_volume_name            = var.destination_volume
