@@ -1,3 +1,14 @@
+#Resource to register FlexPod into CloudManager
+resource "netapp-cloudmanager_cvo_onprem" "cvo-onprem" {
+  name = var.name_of_on-prem-ontap
+  cluster_address = var.on-prem-ontap_cluster_ip
+  cluster_user_name = var.on-prem-ontap_user_name
+  cluster_password = var.on-prem-ontap_user_password
+  client_id = var.connector_id
+  location = "ON_PREM"
+}
+
+
 #Data source to get fetach details of FlexPod details
 data "netapp-cloudmanager_cvo_aws" "on-prem-ontap" {
   name      = var.name_of_on-prem-ontap
