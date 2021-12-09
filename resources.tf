@@ -1,4 +1,4 @@
-#Resource to register FlexPod into CloudManager
+#Resource to register FlexPod storage into CloudManager
 resource "netapp-cloudmanager_cvo_onprem" "cvo-onprem" {
   name              = var.name_of_on-prem-ontap
   cluster_address   = var.on-prem-ontap_cluster_ip
