@@ -11,9 +11,9 @@ resource "netapp-cloudmanager_cvo_onprem" "cvo-onprem" {
 
 #Data source to get fetach details of FlexPod details
 data "netapp-cloudmanager_cvo_aws" "on-prem-ontap" {
-  depends_on  = [netapp-cloudmanager_cvo_onprem.cvo-onprem]
-  name        = var.name_of_on-prem-ontap
-  client_id   = var.connector_id
+  depends_on = [netapp-cloudmanager_cvo_onprem.cvo-onprem]
+  name       = var.name_of_on-prem-ontap
+  client_id  = var.connector_id
 }
 
 

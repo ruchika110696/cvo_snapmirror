@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     netapp-cloudmanager = {
-      source = "NetApp/netapp-cloudmanager"
+      source  = "NetApp/netapp-cloudmanager"
       version = ">= 21.12.0"
     }
   }
