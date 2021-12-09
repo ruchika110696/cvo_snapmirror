@@ -62,6 +62,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   destination_working_environment_id = netapp-cloudmanager_cvo_aws.cvo-aws.id
   source_volume_name                 = var.source_volume
   source_svm_name                    = var.source_storage_vm_name
+  provider_volume_type               = "gp2"
   destination_volume_name            = var.destination_volume
   destination_svm_name               = netapp-cloudmanager_cvo_aws.cvo-aws.svm_name
   policy                             = "MirrorAllSnapshots"
