@@ -13,6 +13,18 @@ variable "name_of_on-prem-ontap" {
   description = "Name of the On-premise ONTAP"
 }
 
+variable "on-prem-ontap_cluster_ip" {
+  description = "The ip address of the storage cluster management interface"
+}
+
+variable "on-prem-ontap_user_name" {
+  description = "Admin user name for the storage cluster"
+}
+
+variable "on-prem-ontap_user_password" {
+  description = "Admin password for the storage cluster"
+}
+
 
 #Variables to create a SINGLE NODE CVO Cluster on AWS
 variable "name_of_cvo_cluster" {
