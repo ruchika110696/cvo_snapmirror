@@ -17,7 +17,7 @@ data "netapp-cloudmanager_cvo_aws" "on-prem-ontap" {
 }
 
 #Resource to create a CVO Cluster on GCP
-resource "netapp-cloudmanager_cvo_gcp" "cvo-gcp" {
+resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   name = var.name_of_cvo_cluster
   project_id = "flexpod-rtpopenlab"
   zone = var.region
@@ -34,11 +34,11 @@ resource "netapp-cloudmanager_cvo_gcp" "cvo-gcp" {
 #Resource to establish snapmirror relationship between on-prem and CVO
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   source_working_environment_id      = data.netapp-cloudmanager_cvo_aws.on-prem-ontap.id
-  destination_working_environment_id = netapp-cloudmanager_cvo_gcp.cvo-gcp.id
+  destination_working_environment_id = netapp-cloudmanager_cvo_gcp.cvogcp.id
   source_volume_name                 = var.source_volume
   source_svm_name                    = var.source_storage_vm_name
   destination_volume_name            = var.destination_volume
-  destination_svm_name               = netapp-cloudmanager_cvo_gcp.cvo-gcp.svm_name
+  destination_svm_name               = netapp-cloudmanager_cvo_gcp.cvogcp.svm_name
   policy                             = "MirrorAllSnapshots"
   schedule                           = var.schedule_of_replication
   max_transfer_rate                  = "102400"
@@ -58,5 +58,5 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   export_policy_type        = "custom"
   export_policy_ip          = ["0.0.0.0/0"]
   export_policy_nfs_version = ["nfs4"]
-  working_environment_id    = netapp-cloudmanager_cvo_gcp.cvo-gcp.id
+  working_environment_id    = netapp-cloudmanager_cvo_gcp.cvogcp.id
 }
