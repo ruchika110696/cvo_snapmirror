@@ -24,7 +24,7 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   gcp_service_account = "abhinav3@netapp.com"
   svm_password = var.cvo_admin_password
   client_id = var.connector_id
-  workspace_id = "workspace-IDz6Nnwl"
+  workspace_id = "workspaceK6sfbTRR"
   gcp_label {
         label_key = "name"
         label_value = "cvo"
