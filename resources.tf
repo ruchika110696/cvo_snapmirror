@@ -25,8 +25,6 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   svm_password = var.cvo_admin_password
   client_id = var.connector_id
   workspace_id = "workspaceK6sfbTRR"
-  vpc_id = "flexpod-rtpopenlab-vpc-01"
-  subnet_id = "flexpod-rtpopenlab-vpc-01-subnet-01"
   gcp_label {
         label_key = "name"
         label_value = "cvo"
