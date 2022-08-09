@@ -27,12 +27,13 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   workspace_id = "workspaceK6sfbTRR"
   vpc_id = "flexpod-rtpopenlab-vpc-01"
   subnet_id = "flexpod-rtpopenlab-vpc-01-subnet-01"
-  license_type = "Freemium"
+  license_type = "gcp-cot-standard-paygo"
   gcp_label {
         label_key = "name"
         label_value = "cvo"
       }
 }
+
 
 #Resource to establish snapmirror relationship between on-prem and CVO
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
