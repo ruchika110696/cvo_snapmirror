@@ -4,7 +4,7 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   name = var.name_of_cvo_cluster
   project_id = "flexpod-rtpopenlab"
   zone = var.region
-  #gcp_service_account = "connector@flexpod-rtpopenlab.iam.gserviceaccount.com"
+  #gcp_service_account = "250322778560-compute@developer.gserviceaccount.com"
   svm_password = var.cvo_admin_password
   client_id = var.connector_id
   workspace_id = "workspaceK6sfbTRR"
