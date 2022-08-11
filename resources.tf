@@ -47,6 +47,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   schedule                           = var.schedule_of_replication
   max_transfer_rate                  = "102400"
   client_id                          = var.connector_id
+  capacity_tier                      = "none"
 }
 
 
