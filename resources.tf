@@ -10,7 +10,8 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   workspace_id = "workspaceK6sfbTRR"
   vpc_id = "flexpod-rtpopenlab-vpc-01"
   subnet_id = "flexpod-rtpopenlab-vpc-01-subnet-01"
-  capacity_tier = "standard"
+  capacity_tier = "cloudStorage"
+  tier_level = "standard"
   capacity_package_name = "Freemium"
   gcp_label {
         label_key = "name"
