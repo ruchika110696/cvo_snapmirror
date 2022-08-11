@@ -31,10 +31,6 @@ variable "name_of_cvo_cluster" {
   description = "The name of the Cloud Volumes ONTAP working environment"
 }
 
-variable "cvo_admin_password" {
-  default = "The admin password for Cloud Volumes ONTAP"
-}
-
 variable "region" {
   description = "The region where the working environment will be created"
 }
