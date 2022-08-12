@@ -64,4 +64,6 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   export_policy_ip          = ["0.0.0.0/0"]
   export_policy_nfs_version = ["nfs4"]
   working_environment_id    = netapp-cloudmanager_cvo_gcp.cvogcp.id
+  capacity_tier             = "none"
+
 }
