@@ -47,7 +47,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   schedule                           = var.schedule_of_replication
   max_transfer_rate                  = "102400"
   client_id                          = var.connector_id
-  capacity_tier                      = "NONE"
+  capacity_tier                      = "none"
 }
 
 
@@ -64,6 +64,6 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   export_policy_ip          = ["0.0.0.0/0"]
   export_policy_nfs_version = ["nfs4"]
   working_environment_id    = netapp-cloudmanager_cvo_gcp.cvogcp.id
-  capacity_tier             = "NONE"
+  capacity_tier             = "none"
 
 }
