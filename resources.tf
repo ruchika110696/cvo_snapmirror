@@ -40,7 +40,7 @@ resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   destination_working_environment_id = netapp-cloudmanager_cvo_gcp.cvogcp.id
   source_volume_name                 = var.source_volume
   source_svm_name                    = var.source_storage_vm_name
-  provider_volume_type               = "gp2"
+  provider_volume_type               = "pd-balanced"
   destination_volume_name            = var.destination_volume
   destination_svm_name               = netapp-cloudmanager_cvo_gcp.cvogcp.svm_name
   policy                             = "MirrorAllSnapshots"
@@ -59,7 +59,7 @@ resource "netapp-cloudmanager_volume" "cvo-volume-nfs" {
   name                      = var.name_of_volume_to_create_on_cvo
   size                      = 1
   unit                      = "GB"
-  provider_volume_type      = "gp2"
+  provider_volume_type      = "pd-balanced"
   export_policy_type        = "custom"
   export_policy_ip          = ["0.0.0.0/0"]
   export_policy_nfs_version = ["nfs4"]
