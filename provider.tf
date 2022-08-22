@@ -7,6 +7,6 @@ terraform {
   }
 }
 provider "netapp-cloudmanager" {
-  refresh_token = var.cloudmanager_refresh_token
+  refresh_token = "28Su8xXRck7jE9HsmV4AQh9jelQWyhKsAWcrDlM-SpQ4Z"
 }
 
