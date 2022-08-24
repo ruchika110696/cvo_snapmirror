@@ -43,13 +43,6 @@ variable "vpc_id" {
   description = "The VPC ID where the working environment will be created"
 }
 
-variable "license_type" {
-  description = "The type of license to use"
-  #For single node: ['cot-explore-paygo','cot-standard-paygo', 'cot-premium-paygo', 'cot-premium-byol', 'capacity-paygo'].
-  #For HA: ['ha-cot-explore-paygo','ha-cot-standard-paygo','ha-cot-premium-paygo','ha-cot-premium-byol','ha-capacity-paygo']
-}
-
-
 #Variables related to SnapMirror configuration
 variable "source_volume" {
   description = "The name of the source volume"
