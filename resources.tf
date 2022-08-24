@@ -38,8 +38,8 @@ resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
 resource "netapp-cloudmanager_snapmirror" "cl-snapmirror" {
   source_working_environment_id      = data.netapp-cloudmanager_cvo_aws.on-prem-ontap.id
   destination_working_environment_id = netapp-cloudmanager_cvo_gcp.cvogcp.id
-  source_volume_name                 = "test"
-  source_svm_name                    = "flexpod-svm"
+  source_volume_name                 = var.source_volume
+  source_svm_name                    = var.source_storage_vm_name
   provider_volume_type               = "pd-balanced"
   destination_volume_name            = var.destination_volume
   destination_svm_name               = netapp-cloudmanager_cvo_gcp.cvogcp.svm_name
