@@ -60,6 +60,11 @@ variable "cvo_admin_password" {
   description = "The admin password for Cloud Volumes ONTAP"
 }
 
+variable "capacity_package_name" {
+  description = "The type of license to capacity package name"
+  #For single node:['Essential', 'Professional', 'Freemium']. Default is 'Essential'.
+}
+
 #Variables related to SnapMirror configuration
 variable "source_volume" {
   description = "The name of the source volume"
