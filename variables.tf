@@ -36,6 +36,10 @@ variable "project_id" {
   description = "project id of Cloud Volumes ONTAP working environment"
 }
 
+variable "workspace_id" {
+  description = "workspace id of Cloud Volumes ONTAP working environment"
+}
+
 variable "gcp_service_account" {
   description = "gcp_service_account of Cloud Volumes ONTAP working environment"
 }
