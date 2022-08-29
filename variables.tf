@@ -26,13 +26,22 @@ variable "on-prem-ontap_user_password" {
 }
 
 
-#Variables to create a SINGLE NODE CVO Cluster on AWS
+#Variables to create a CVO Cluster on GCP
+
 variable "name_of_cvo_cluster" {
   description = "The name of the Cloud Volumes ONTAP working environment"
 }
 
-variable "region" {
-  description = "The region where the working environment will be created"
+variable "project_id" {
+  description = "project id of Cloud Volumes ONTAP working environment"
+}
+
+variable "gcp_service_account" {
+  description = "gcp_service_account of Cloud Volumes ONTAP working environment"
+}
+
+variable "zone" {
+  description = "The zone where the working environment will be created"
 }
 
 variable "subnet" {
@@ -66,48 +75,3 @@ variable "name_of_volume_to_create_on_cvo" {
   description = "Name of the cloud volume"
 }
 
-
-/*
-#Variables to create a Highly Available CVO Cluster on AWS
-variable "failover_mode" {
-  description = "Failover mode for the HA pair: ['PrivateIP', 'FloatingIP']"
-  #'PrivateIP' is for a single availability zone
-  #'FloatingIP' is for multiple availability zones.
-}
-
-variable "node1_subnet_id" {
-  description = "Subnet ID of the first node"
-}
-
-variable "node2_subnet_id" {
-  description = "Subnet ID of the second node"
-}
-
-variable "subnet_id_of_mediator" {
-  description = "Subnet ID of the mediator"
-}
-
-variable "keypair_name_for_mediator" {
-  description = "Key pair name for the mediator instance."
-}
-
-variable "cluster_management_floating_IP" {
-  description = "Cluster management floating IP address."
-}
-
-variable "data_floating_IP" {
-  description = "Data floating IP address-1"
-}
-
-variable "data_floating_IP_2" {
-  description = "Data floating IP address-2"
-}
-
-variable "svm_management_floating_IP" {
-  description = "SVM management floating IP address"
-}
-
-variable "list_of_routing_table_ids" {
-  description = "List of route table IDs that will be updated with the floating IPs"
-}
-*/
