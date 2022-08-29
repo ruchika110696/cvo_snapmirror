@@ -17,17 +17,15 @@ data "netapp-cloudmanager_cvo_aws" "on-prem-ontap" {
 #Resource to create a CVO Cluster on GCP
 resource "netapp-cloudmanager_cvo_gcp" "cvogcp" {
   name = var.name_of_cvo_cluster
-  project_id = "flexpod-rtpopenlab"
-  zone = var.region
-  gcp_service_account = "250322778560-compute@developer.gserviceaccount.com"
-  svm_password = "H1ghV0lt"
+  project_id = var.project_id
+  zone = var.zone
+  gcp_service_account = var.gcp_service_account
+  svm_password = var.cvo_admin_password
   client_id = var.connector_id
-  workspace_id = "workspaceK6sfbTRR"
-  vpc_id = "flexpod-rtpopenlab-vpc-01"
-  subnet_id = "flexpod-rtpopenlab-vpc-01-subnet-01"
-  #capacity_tier = "cloudStorage"
-  #tier_level = "standard"
-  capacity_package_name = "Freemium"
+  workspace_id = var.workspace_id
+  vpc_id = var.vpc_id
+  subnet_id = var.subnet_id
+  capacity_package_name = var.capacity_package_name
   gcp_label {
         label_key = "name"
         label_value = "cvo"
