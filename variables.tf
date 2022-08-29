@@ -48,7 +48,7 @@ variable "zone" {
   description = "The zone where the working environment will be created"
 }
 
-variable "subnet" {
+variable "subnet_id" {
   description = "The subnet id where the working environment will be created."
 }
 
