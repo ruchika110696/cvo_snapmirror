@@ -52,6 +52,10 @@ variable "vpc_id" {
   description = "The VPC ID where the working environment will be created"
 }
 
+variable "cvo_admin_password" {
+  description = "The admin password for Cloud Volumes ONTAP"
+}
+
 #Variables related to SnapMirror configuration
 variable "source_volume" {
   description = "The name of the source volume"
